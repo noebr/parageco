@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+<title>FORMULARIO</title>
+</head>
+<body>
+<div class="container mt-4">
+<div class="col-sm-6">
+<form th:action="@{/save}" th:object=${persona} method="POST">
+<div class="card">
+<div class="card-header">
+<h3>persona!</h3>
+</div>
+<div class="card-body">
+<div class="form-goup">
+<label>ID</label>
+<input th:field="*{id}" type="text" class="form-control"/>
+</div>
+
+<div class="form-goup">
+<label>NOMBRE</label>
+<input th:field="*{nombre}" type="text" class="form-control"/>
+</div>
+
+<div class="form-goup">
+<label>email</label>
+<input th:field="*{email}" type="text" class="form-control"/>
+</div>
+
+<div class="form-goup">
+<label>direccion</label>
+<input th:field="*{direccion}" type="text" class="form-control"/>
+</div>
+
+</div>
+<div class="card-footer">
+<input type="submit" value="guardar" class="btn btn-sucess">
+</div>
+</div>
+</form>
+</div>
+</div>
+
+</body>
+</html>
